@@ -1,0 +1,20 @@
+apiVersion: keycloak.org/v1alpha1
+kind: Keycloak
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+  name: rhsso-test
+  labels:
+    app: rhsso-test
+  namespace: rhsso-test
+spec:
+  multiAvailablityZones:
+    enabled: true
+  externalAccess:
+    enabled: true
+  keycloakDeploymentSpec:
+    imagePullPolicy: Always
+  postgresDeploymentSpec:
+    imagePullPolicy: Always
+  instances: 2
+  storageClassName: gp2
