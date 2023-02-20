@@ -1,10 +1,12 @@
 apiVersion: keycloak.org/v1alpha1
 kind: Keycloak
 metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
   name: rhsso-dev
   labels:
-    app: sso
-  namespace: rh-sso-dev
+    app: rhsso-dev
+  namespace: rhsso-dev
 spec:
   multiAvailablityZones:
     enabled: true
@@ -16,8 +18,3 @@ spec:
     imagePullPolicy: Always
   instances: 2
   storageClassName: gp2
-
-
-classic load balancer 
-
-application/network load balancer
