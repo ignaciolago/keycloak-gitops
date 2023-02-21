@@ -16,5 +16,5 @@ oc apply -k bootstrap/deploy/02_rhsso-test
 # Install Database for prod
 # add values to secret for DB
 ```
-oc apply -k bootstrap/deploy/03_rhsso-prod
+oc apply -k bootstrap/deploy/application/03_rhsso-prod
 ```

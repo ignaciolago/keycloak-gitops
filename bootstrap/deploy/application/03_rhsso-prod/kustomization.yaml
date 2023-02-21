@@ -3,4 +3,4 @@ kind: Kustomization
 commonAnnotations:
   argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 resources:
-- 01_rh-sso.yaml
+- 03_rhsso-prod.yaml
