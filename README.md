@@ -3,12 +3,9 @@
 ```
 oc apply -k bootstrap/argocd
 ```
-## Second we install the Red Hat Single Sign On Operator
+## Second we install the Red Hat Single Sign Dev Environment using Red Hat Single Sign On Operator
 ```
-oc apply -k bootstrap/deploy/application/00_rhsso-operator
-```
-##
-oc apply -k bootstrap/deploy/01_rhsso-dev
+oc apply -k bootstrap/deploy/application/01_rhsso-dev
 ```
 
 # Install Database for test
