@@ -2,4 +2,5 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - 00_namespace_rhsso-dev.yaml
-- 01_deploy_rhsso-dev.yaml
+- 01_rh-sso-operator.yaml
+- 02_deploy_rhsso-dev.yaml
