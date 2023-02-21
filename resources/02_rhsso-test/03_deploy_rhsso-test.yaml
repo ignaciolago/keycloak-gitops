@@ -2,7 +2,7 @@ apiVersion: keycloak.org/v1alpha1
 kind: Keycloak
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "3"
   name: rhsso-test
   labels:
     app: rhsso-test
@@ -10,7 +10,7 @@ metadata:
 spec:
   multiAvailablityZones:
     enabled: true
-  externalAccess:
+  externalDatabase:
     enabled: true
   keycloakDeploymentSpec:
     imagePullPolicy: Always
