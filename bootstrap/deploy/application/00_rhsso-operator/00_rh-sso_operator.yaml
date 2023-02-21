@@ -8,10 +8,10 @@ metadata:
 spec:
   destination:
     name: ''
-    namespace: openshift-operators
+    namespace: openshift-gitops
     server: 'https://kubernetes.default.svc'
   source:
-    path: resources/operator
+    path: resources/00_rhsso-operator
     repoURL: 'https://github.com/ignaciolago/keycloak-gitops.git'
     targetRevision: HEAD
   project: default
