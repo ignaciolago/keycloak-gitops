@@ -1,4 +1,4 @@
-# OperatorGroup resource for ACM
+# OperatorGroup resource for RHSSO
 ---
 apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
