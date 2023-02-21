@@ -10,7 +10,7 @@ metadata:
 spec:
   multiAvailablityZones:
     enabled: true
-  externalAccess:
+  externalDatabase:
     enabled: true
   keycloakDeploymentSpec:
     imagePullPolicy: Always
