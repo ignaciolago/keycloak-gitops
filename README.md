@@ -1,6 +1,6 @@
 # keycloak-gitops
 ## First we install the argocd operator:
-oc apply -k bootstrap/argocd
+```oc apply -k bootstrap/argocd```
 ##
 oc apply -k bootstrap/deploy/00_rhsso-operator
 oc apply -k bootstrap/deploy/01_rhsso-dev
