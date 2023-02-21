@@ -5,11 +5,11 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
   name: rhsso-prod
-  namespace: rhsso-dev
+  namespace: openshift-gitops
 spec:
   destination:
     name: ''
-    namespace: openshift-operators
+    namespace: openshift-gitops
     server: 'https://kubernetes.default.svc'
   source:
     path: resources/03_rhsso-prod
