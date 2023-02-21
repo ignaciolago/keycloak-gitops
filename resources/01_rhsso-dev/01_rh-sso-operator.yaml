@@ -4,7 +4,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
   name: rhsso-operator
-  namespace: openshift-operators
+  namespace: rhsso-dev
 spec:
   channel: stable
   installPlanApproval: Automatic
