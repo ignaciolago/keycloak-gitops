@@ -1,0 +1,27 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+  name: rhsso-dev
+  namespace: openshift-gitops
+spec:
+  destination:
+    name: ''
+    namespace: openshift-gitops
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: resources/01_rhsso-dev
+# we specify the folder for the files
+    repoURL: 'https://github.com/ignaciolago/keycloak-gitops.git'
+# the repository url
+    targetRevision: HEAD
+# and branch, in this case HEAD / main
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - PruneLast=true

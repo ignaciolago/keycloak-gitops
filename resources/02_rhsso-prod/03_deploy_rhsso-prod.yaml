@@ -1,0 +1,21 @@
+---
+apiVersion: keycloak.org/v1alpha1
+kind: Keycloak
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+  name: rhsso-prod
+  labels:
+    app: rhsso-prod
+  namespace: rhsso-prod
+spec:
+  multiAvailablityZones:
+    enabled: true
+  externalDatabase:
+    enabled: true
+  keycloakDeploymentSpec:
+    imagePullPolicy: Always
+  postgresDeploymentSpec:
+    imagePullPolicy: Always
+  instances: 2
+  storageClassName: gp2
