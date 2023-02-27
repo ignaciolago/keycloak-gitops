@@ -8,3 +8,4 @@ resources:
 - 01_secret_rhsso-prod-database.yaml
 - 02_rh-sso-operator.yaml
 - 03_deploy_rhsso-prod.yaml
+- 04_rh-sso-hpa.yaml

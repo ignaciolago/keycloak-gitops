@@ -9,6 +9,8 @@ metadata:
     app: rhsso-dev
   namespace: rhsso-dev
 spec:
+  disableReplicasSyncing: true
+# disable the Replica sync in order to use the HPA for scalling
   multiAvailablityZones:
     enabled: true
 # we add this flag for HA deploy, we need more than 1 pod for this
