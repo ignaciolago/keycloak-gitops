@@ -4,13 +4,13 @@ kind: Application
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
-  name: rhsso-dev
-  namespace: openshift-gitops-local
+  name: rhsso-dev_remote-cluster
+  namespace: openshift-gitops
 spec:
   destination:
     name: ''
     namespace: openshift-gitops
-    server: 'https://kubernetes.default.svc'
+    server: 'remote_cluster_api_url_and_port'
   source:
     path: resources/01_rhsso-dev
 # we specify the folder for the files
