@@ -23,6 +23,8 @@ metadata:
   labels:
     application: {{ include "sso76-chart.fullname" . }}
     component: "server"
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   type: {{ .Values.service.type }}
   ipFamilyPolicy": "PreferDualStack"

@@ -7,6 +7,8 @@ metadata:
     application: {{ include "sso76-chart.fullname" . }}
     component: "server"
     rhsso: 7.6.1.GA
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   strategy":
     type: "Recreate"

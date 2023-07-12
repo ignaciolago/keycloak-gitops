@@ -5,5 +5,5 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
 # now that we deploying using ArgoCD we can specify the order of deploy
-  name: rhsso-dev
+  name: {{ include "sso76-chart.fullname" . }}
 spec: {}

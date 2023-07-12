@@ -1,9 +1,0 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-commonAnnotations:
-  argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
-# To skip the dry run for missing resource types, use the following annotation
-resources:
-- 00_namespace_rhsso-dev.yaml
-- 01_sso76-chart-0.1.0.tgz
-- 02_rh-sso-hpa.yaml

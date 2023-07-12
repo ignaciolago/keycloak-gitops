@@ -16,7 +16,7 @@ spec:
 # we specify the folder for the files
     repoURL: 'https://github.com/ignaciolago/keycloak-gitops.git'
 # the repository url
-    targetRevision: HEAD
+    targetRevision: checkout
 # and branch, in this case HEAD / main
   project: default
   syncPolicy:
