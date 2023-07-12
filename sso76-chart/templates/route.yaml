@@ -1,0 +1,17 @@
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+id: {{ include "sso76-chart.fullname" . }}
+metadata:
+  name: {{ include "sso76-chart.fullname" . }}
+  labels:
+    application": {{ include "sso76-chart.fullname" . }}
+    component": "server"
+annotations: 
+  description: "Route for application's http service."
+spec:
+  host: {{ .Values.route.host }}
+  to: 
+    name: {{ include "sso76-chart.fullname" . }}
+  selector:
+    {{- include "sso76-chart.selectorLabels" . | nindent 4 }}
